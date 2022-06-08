@@ -1,0 +1,27 @@
+<div id="<%= dom_id clock %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= clock.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= clock.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Sections:</strong>
+    <%= clock.sections %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Marked:</strong>
+    <%= clock.marked %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this clock", clock, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this clock', edit_clock_path(clock), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

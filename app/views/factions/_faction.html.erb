@@ -1,0 +1,47 @@
+<div id="<%= dom_id faction %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= faction.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= faction.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Tier:</strong>
+    <%= faction.tier %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Hold:</strong>
+    <%= faction.hold %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Turf:</strong>
+    <%= faction.turf %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Assets:</strong>
+    <%= faction.assets %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Quirks:</strong>
+    <%= faction.quirks %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Situation:</strong>
+    <%= faction.situation %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this faction", faction, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this faction', edit_faction_path(faction), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

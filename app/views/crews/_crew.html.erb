@@ -1,0 +1,42 @@
+<div id="<%= dom_id crew %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= crew.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= crew.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Type:</strong>
+    <%= crew.type %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Tier:</strong>
+    <%= crew.tier %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Hold:</strong>
+    <%= crew.hold %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Reputation:</strong>
+    <%= crew.reputation %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Rep:</strong>
+    <%= crew.rep %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this crew", crew, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this crew', edit_crew_path(crew), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

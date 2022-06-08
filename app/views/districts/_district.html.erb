@@ -1,0 +1,57 @@
+<div id="<%= dom_id district %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= district.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= district.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Scene:</strong>
+    <%= district.scene %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Streets:</strong>
+    <%= district.streets %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Buildings:</strong>
+    <%= district.buildings %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Wealth:</strong>
+    <%= district.wealth %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Security:</strong>
+    <%= district.security %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Crime:</strong>
+    <%= district.crime %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Occult:</strong>
+    <%= district.occult %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Special:</strong>
+    <%= district.special %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this district", district, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this district', edit_district_path(district), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
