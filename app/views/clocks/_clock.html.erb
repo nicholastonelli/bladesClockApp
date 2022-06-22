@@ -19,6 +19,14 @@
     <%= clock.marked %>
   </p>
 
+  <div data-controller="clockworks"
+       data-clockworks-sections-value="<%=clock.sections%>"
+       data-clockworks-marked-value="<%=clock.marked%>"
+  >
+    <svg data-clockworks-target="svg">
+    </svg>
+  </div>
+
   <% if action_name != "show" %>
     <%= link_to "Show this clock", clock, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Edit this clock', edit_clock_path(clock), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
