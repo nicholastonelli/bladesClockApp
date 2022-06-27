@@ -31,7 +31,6 @@ export default class extends Controller {
   }
 
   makeMarked(marked, cx = 55, cy = 55, r = 55) {
-    console.log("making marks")
     let clockMarked = this.createSvg("circle")
     clockMarked.setAttribute("fill", "transparent")
     clockMarked.setAttribute("r", r)
@@ -41,7 +40,7 @@ export default class extends Controller {
     clockMarked.setAttribute("stroke-width", "50")
     clockMarked.setAttribute(
       "stroke-dasharray",
-      `calc((${this.markedValue}/${this.sectionsValue}) * 147) 360`
+      `${(this.markedValue / this.sectionsValue) * 147} 360`
     )
     clockMarked.setAttribute("transform", "rotate(-90) translate(-110)")
 
