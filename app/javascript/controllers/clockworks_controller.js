@@ -38,6 +38,7 @@ export default class extends Controller {
     clockMarked.setAttribute("cy", cy)
     clockMarked.setAttribute("stroke", "#424242")
     clockMarked.setAttribute("stroke-width", "50")
+    clockMarked.setAttribute("vector-effect", "non-scaling-stroke")
     clockMarked.setAttribute(
       "stroke-dasharray",
       `${(this.markedValue / this.sectionsValue) * 147} 360`
